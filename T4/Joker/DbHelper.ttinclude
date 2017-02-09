@@ -342,7 +342,7 @@
 <#+
 	public class config
 	{
-        public static readonly string ConnectionString = "Data Source=(local);Initial Catalog=JokerBase;User ID=sa;Password=Mf123456*;";
+        public static readonly string ConnectionString = "Data Source=(local);Initial Catalog=JokerBase;User ID=sa;Password=xxxxxx;";
 		//public static readonly string ConnectionString = "Data Source=orcl;Persist Security Info=True;User ID=orcl;Password=orcl;Unicode=True";
 
         public static readonly string DbDatabase = "JokerBase";

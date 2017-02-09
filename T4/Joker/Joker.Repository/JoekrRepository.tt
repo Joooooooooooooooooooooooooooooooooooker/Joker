@@ -1,0 +1,47 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ assembly name="System.Data.dll" #>
+<#@ assembly name="System.Data.DataSetExtensions.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ include file="$(ProjectDir)DbHelper.ttinclude"  #>
+//------------------------------------------------------------------------------
+// Joooooooooooker
+//     此代码由T4模板自动生成
+//	   生成时间 <#=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")#> by joker
+//     对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
+// Joooooooooooker
+//------------------------------------------------------------------------------
+<# 
+	var tableName=config.TableName.Replace("Sys_","")+"Repository";
+	var entity=config.TableName.Replace("Sys_","")+"Entity";
+ #>
+using Joker.Data;
+using Joker.Domain.Entity.SystemManage;
+using Joker.Domain.IRepository.SystemManage;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Joker.Repository.SystemManage
+{	
+	/// <summary>
+	/// <#=tableName#>
+	/// </summary>	
+	public class <#=tableName#>:RepositoryBase<<#=entity#>>,I<#=tableName#>
+	{
+
+    }
+}
+
+
+

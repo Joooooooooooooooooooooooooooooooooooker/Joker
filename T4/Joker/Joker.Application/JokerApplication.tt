@@ -1,0 +1,76 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ assembly name="System.Data.dll" #>
+<#@ assembly name="System.Data.DataSetExtensions.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ include file="$(ProjectDir)DbHelper.ttinclude"  #>
+//------------------------------------------------------------------------------
+// Joooooooooooker
+//    此代码由T4模板自动生成
+//	   生成时间 <#=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")#> by joker
+//    对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
+// Joooooooooooker
+//------------------------------------------------------------------------------
+<# 
+	var tableName=config.TableName.Replace("Sys_","")+"App";
+	var entity=config.TableName.Replace("Sys_","")+"Entity";
+	var repository=config.TableName.Replace("Sys_","")+"Repository";
+ #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using Joker.Domain.Entity.SystemManage;
+using Joker.Domain.IRepository.SystemManage;
+using Joker.Repository.SystemManage;
+namespace Joker.Application.SystemManage
+{	
+	/// <summary>
+	/// <#=tableName#>
+	/// </summary>	
+	public class <#=tableName#>
+	{
+	    private I<#=repository#> service=new <#=repository#>();
+
+		public List<<#=entity#>> GetList()
+        {
+            return service.IQueryable().ToList();
+        }
+
+	    public <#=entity#> GetForm(string keyValue)
+        {
+            return service.FindEntity(keyValue);
+        }
+
+        public void Delete(<#=entity#> entity)
+        {
+            service.Delete(entity);
+        }
+
+		public void SubmitForm(<#=entity#> entity, string keyValue)
+        {
+            if (!string.IsNullOrEmpty(keyValue))
+            {
+                entity.Modify(keyValue);
+                service.Update(entity);
+            }
+            else
+            {
+                entity.Create();
+                service.Insert(entity);
+            }
+        }
+
+    }
+}
+
+
+

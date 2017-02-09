@@ -1,0 +1,47 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ output extension=".cs" #>
+<#@ assembly name="System.Core.dll" #>
+<#@ assembly name="System.Data.dll" #>
+<#@ assembly name="System.Data.DataSetExtensions.dll" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Data" #>
+<#@ import namespace="System.Data.SqlClient" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ include file="$(ProjectDir)DbHelper.ttinclude"  #>
+//------------------------------------------------------------------------------
+// Joooooooooooker
+//    此代码由T4模板自动生成
+//	   生成时间 <#=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")#> by joker
+//    对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
+// Joooooooooooker
+//------------------------------------------------------------------------------
+<# 
+	var dbTableName=config.TableName;
+	var tableName=config.TableName.Replace("Sys_","")+"Map";
+	var entity=config.TableName.Replace("Sys_","")+"Entity";
+	var list=  DbHelper.GetDbColumns(config.ConnectionString, config.DbDatabase, config.TableName);
+    var pk = DbHelper.GetPrimaryKey(list);
+ #>
+using Joker.Domain.Entity.SystemManage;
+using System.Data.Entity.ModelConfiguration;
+namespace Joker.Mapping.SystemManage
+{	
+	/// <summary>
+	/// <#=tableName#>
+	/// </summary>	
+	public class <#=tableName#>:EntityTypeConfiguration<<#=entity#>>
+	{
+	   public <#=tableName#>()
+	   {
+	      this.ToTable("<#=dbTableName#>");
+		  this.HasKey(t=>t.<#=pk#>);
+	   }
+    }
+}
+
+
+

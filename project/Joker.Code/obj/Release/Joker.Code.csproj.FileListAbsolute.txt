@@ -1,0 +1,16 @@
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\Joker.Code.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\Joker.Code.pdb
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\ICSharpCode.SharpZipLib.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\log4net.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\Newtonsoft.Json.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.OOXML.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.OpenXml4Net.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.OpenXmlFormats.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\log4net.xml
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\Newtonsoft.Json.xml
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.xml
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.OOXML.xml
+E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.OpenXml4Net.xml
+E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Release\Joker.Code.dll
+E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Release\Joker.Code.pdb

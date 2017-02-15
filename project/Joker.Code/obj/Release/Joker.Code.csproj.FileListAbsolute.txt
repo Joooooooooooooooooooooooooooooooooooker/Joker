@@ -14,3 +14,4 @@ E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.OOXML.xml
 E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Release\NPOI.OpenXml4Net.xml
 E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Release\Joker.Code.dll
 E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Release\Joker.Code.pdb
+E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Release\Joker.Code.csprojResolveAssemblyReference.cache

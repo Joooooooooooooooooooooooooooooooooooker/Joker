@@ -12,7 +12,6 @@
 <#@ import namespace="System.Collections.Generic" #>
 <#@ import namespace="System.IO" #>
 <#@ include file="$(ProjectDir)DbHelper.ttinclude"  #>
-
 //------------------------------------------------------------------------------
 // Joooooooooooker
 //    此代码由T4模板自动生成
@@ -20,14 +19,14 @@
 //    对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
 // Joooooooooooker
 //------------------------------------------------------------------------------
-<# 
-	var tableName=config.TableName.Replace("Sys_","")+"Entity";
-	
+<#
+	var module = config.Module;
+	var tableName=config.TableName.Replace("Tbl_","")+"Entity";
  #>
-
 using System;
-namespace Joker.Domain.Entity.SystemManage
-{	
+
+namespace Joker.Domain.Entity.<#=module#>
+{
 	/// <summary>
 	/// <#=tableName#>
 	/// </summary>	
@@ -38,6 +37,3 @@ namespace Joker.Domain.Entity.SystemManage
 <#}#> 
     }
 }
-
-
-

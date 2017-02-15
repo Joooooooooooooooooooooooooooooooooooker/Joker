@@ -120,6 +120,7 @@
     <Compile Include="Areas\ExampleManage\Controllers\SendMessagesController.cs" />
     <Compile Include="Areas\ExampleManage\Controllers\SignetController.cs" />
     <Compile Include="Areas\ExampleManage\ExampleManageAreaRegistration.cs" />
+    <Compile Include="Areas\OrderManage\Controllers\OrderController.cs" />
     <Compile Include="Areas\OrderManage\OrderManageAreaRegistration.cs" />
     <Compile Include="Areas\ReportManage\Controllers\EchartsController.cs" />
     <Compile Include="Areas\ReportManage\Controllers\HighchartsController.cs" />
@@ -549,8 +550,6 @@
     <Content Include="Areas\ReportManage\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\OrderManage\Controllers\" />
-    <Folder Include="Areas\OrderManage\Views\" />
     <Folder Include="Areas\ReportManage\Views\Echarts\" />
   </ItemGroup>
   <ItemGroup>
@@ -605,6 +604,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\SystemManage\Views\User\Info.cshtml" />
+    <Content Include="Areas\OrderManage\Views\Order\Index.cshtml" />
+    <Content Include="Areas\OrderManage\Views\Web.config" />
+    <Content Include="Areas\OrderManage\Views\Order\Form.cshtml" />
+    <Content Include="Areas\OrderManage\Views\Order\Details.cshtml" />
     <None Include="Properties\PublishProfiles\Joker.Framework.Release.pubxml" />
     <None Include="Properties\PublishProfiles\NFine.Framework.Release.pubxml" />
   </ItemGroup>

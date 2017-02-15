@@ -30,4 +30,3 @@ E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Debug\NPOI.OOXML.xml
 E:\C#Demo\Joooooooooooker\project\Joker.Code\bin\Debug\NPOI.OpenXml4Net.xml
 E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Debug\Joker.Code.dll
 E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Debug\Joker.Code.pdb
-E:\C#Demo\Joooooooooooker\project\Joker.Code\obj\Debug\Joker.Code.csprojResolveAssemblyReference.cache

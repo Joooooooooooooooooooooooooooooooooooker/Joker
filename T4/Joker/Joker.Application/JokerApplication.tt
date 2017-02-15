@@ -20,18 +20,20 @@
 // Joooooooooooker
 //------------------------------------------------------------------------------
 <# 
-	var tableName=config.TableName.Replace("Sys_","")+"App";
-	var entity=config.TableName.Replace("Sys_","")+"Entity";
-	var repository=config.TableName.Replace("Sys_","")+"Repository";
+	var module = config.Module;
+	var tableName=config.TableName.Replace("Tbl_","")+"App";
+	var entity=config.TableName.Replace("Tbl_","")+"Entity";
+	var repository=config.TableName.Replace("Tbl_","")+"Repository";
  #>
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Joker.Domain.Entity.SystemManage;
-using Joker.Domain.IRepository.SystemManage;
-using Joker.Repository.SystemManage;
-namespace Joker.Application.SystemManage
+using Joker.Domain.Entity.<#=module#>;
+using Joker.Domain.IRepository.<#=module#>;
+using Joker.Repository.<#=module#>;
+
+namespace Joker.Application.<#=module#>
 {	
 	/// <summary>
 	/// <#=tableName#>
@@ -68,9 +70,5 @@ namespace Joker.Application.SystemManage
                 service.Insert(entity);
             }
         }
-
     }
 }
-
-
-

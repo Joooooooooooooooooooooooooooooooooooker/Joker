@@ -342,10 +342,17 @@
 <#+
 	public class config
 	{
-        public static readonly string ConnectionString = "Data Source=(local);Initial Catalog=JokerBase;User ID=sa;Password=xxxxxx;";
+		//数据库连接字符串
+        public static readonly string ConnectionString = "Data Source=(local);Initial Catalog=JokerBase;User ID=sa;Password=Mf123456*;";
 		//public static readonly string ConnectionString = "Data Source=orcl;Persist Security Info=True;User ID=orcl;Password=orcl;Unicode=True";
 
+		//模块名称
+		public static readonly string Module = "OrderManage";
+
+		//数据库名称
         public static readonly string DbDatabase = "JokerBase";
-        public static readonly string TableName = "Sys_User";
+
+		//表名
+        public static readonly string TableName = "Tbl_Order";
 	}
 #>

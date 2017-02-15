@@ -19,21 +19,22 @@
 //     对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
 // Joooooooooooker
 //------------------------------------------------------------------------------
-<# 
-	var tableName=config.TableName.Replace("Sys_","")+"Repository";
-	var entity=config.TableName.Replace("Sys_","")+"Entity";
+<#
+	var module = config.Module;
+	var tableName=config.TableName.Replace("Tbl_","")+"Repository";
+	var entity=config.TableName.Replace("Tbl_","")+"Entity";
  #>
 using Joker.Data;
-using Joker.Domain.Entity.SystemManage;
-using Joker.Domain.IRepository.SystemManage;
+using Joker.Domain.Entity.<#=module#>;
+using Joker.Domain.IRepository.<#=module#>;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Joker.Repository.SystemManage
-{	
+namespace Joker.Repository.<#=module#>
+{
 	/// <summary>
 	/// <#=tableName#>
 	/// </summary>	
@@ -42,6 +43,3 @@ namespace Joker.Repository.SystemManage
 
     }
 }
-
-
-

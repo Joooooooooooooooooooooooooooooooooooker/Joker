@@ -19,17 +19,19 @@
 //    对此文件的更改可能会导致不正确的行为，并且如果重新生成代码，这些更改将会丢失。
 // Joooooooooooker
 //------------------------------------------------------------------------------
-<# 
+<#
+	var module = config.Module;
 	var dbTableName=config.TableName;
-	var tableName=config.TableName.Replace("Sys_","")+"Map";
-	var entity=config.TableName.Replace("Sys_","")+"Entity";
+	var tableName=config.TableName.Replace("Tbl_","")+"Map";
+	var entity=config.TableName.Replace("Tbl_","")+"Entity";
 	var list=  DbHelper.GetDbColumns(config.ConnectionString, config.DbDatabase, config.TableName);
     var pk = DbHelper.GetPrimaryKey(list);
  #>
-using Joker.Domain.Entity.SystemManage;
+using Joker.Domain.Entity.<#=module#>;
 using System.Data.Entity.ModelConfiguration;
-namespace Joker.Mapping.SystemManage
-{	
+
+namespace Joker.Mapping.<#=module#>
+{
 	/// <summary>
 	/// <#=tableName#>
 	/// </summary>	
@@ -42,6 +44,3 @@ namespace Joker.Mapping.SystemManage
 	   }
     }
 }
-
-
-

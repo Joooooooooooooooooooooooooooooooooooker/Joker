@@ -1082,8 +1082,11 @@ td.menu_text {
 .search_buttons #bs_search {
     margin-left: 3px;
 }
+
+/*如果全选checkbox列错位 打开注释*/
 /*.ui-jqgrid .cbox{margin-left: -1px;position: initial;vertical-align: text-bottom;}
 .ui-jqgrid .checkbox{margin-left: 8px;position:initial;margin-top:3.5px;}*/
+
 .ui-jqgrid .ui-th-div .ckbox input[type="checkbox"] {
     margin-bottom: 3px;
 }
